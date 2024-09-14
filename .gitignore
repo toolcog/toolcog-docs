@@ -1,0 +1,16 @@
+# System and IDE files
+.DS_Store
+.vscode/
+
+# Package management
+node_modules/
+
+# Build outputs
+dist/
+
+# Build caches
+.astro/
+.turbo/
+
+# Generated content
+src/content/docs/api

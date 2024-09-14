@@ -1,0 +1,35 @@
+{
+  "private": true,
+  "name": "@toolcog/docs",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "check": "astro check",
+    "preview": "astro preview",
+    "lint": "eslint src/",
+    "format": "prettier --check src/**/*.ts",
+    "clean": "rimraf .astro .turbo src/content/docs/api dist",
+    "clean-all": "rimraf .astro .turbo src/content/docs/api dist node_modules"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9",
+    "@astrojs/mdx": "^3.1",
+    "@astrojs/sitemap": "^3.1",
+    "@astrojs/starlight": "^0.27",
+    "astro": "^4.15",
+    "astro-expressive-code": "^0.36",
+    "eslint": "^9.10",
+    "eslint-plugin-astro": "^1.2",
+    "prettier": "^3.3",
+    "prettier-plugin-astro": "^0.14",
+    "rimraf": "^6.0",
+    "sharp": "^0.33",
+    "starlight-blog": "^0.12",
+    "starlight-typedoc": "^0.16",
+    "typedoc": "^0.26",
+    "typedoc-plugin-markdown": "^4.2",
+    "typescript": "^5.6"
+  },
+  "packageManager": "pnpm@9.10.0"
+}
