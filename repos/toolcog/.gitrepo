@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/ingydotnet/git-subrepo#readme
+;
+[subrepo]
+	remote = https://github.com/toolcog/toolcog.git
+	branch = main
+	commit = 239e609db893fbc90a82262bcac84716fde6e491
+	parent = d8bda793f264d5b35576541df068ff4fa90a76b5
+	method = merge
+	cmdver = 0.4.9

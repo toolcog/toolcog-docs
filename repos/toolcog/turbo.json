@@ -1,0 +1,50 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "tasks": {
+    "topo": {
+      "dependsOn": ["^topo"]
+    },
+    "dev": {
+      "dependsOn": ["^build"],
+      "cache": false,
+      "persistent": true,
+      "interactive": false
+    },
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": [
+        "package.json",
+        "tsconfig.json",
+        "rollup.config.js",
+        ".toolcog/precache.yaml",
+        "src/**",
+        "*/src/**"
+      ],
+      "outputs": ["dist/**", "toolcog-manifest.yaml"],
+      "outputLogs": "new-only",
+      "passThroughEnv": ["OPENAI_API_KEY"]
+    },
+    "check": {
+      "dependsOn": ["topo"],
+      "inputs": ["tsconfig.json", "src/**", "*/src/**"]
+    },
+    "lint": {
+      "dependsOn": ["topo"],
+      "inputs": ["eslint.config.js", "src/**", "*/src/**"]
+    },
+    "format": {
+      "dependsOn": ["topo"],
+      "inputs": ["prettier.config.js", "src/**", "*/src/**"]
+    },
+    "test": {
+      "dependsOn": ["build"],
+      "inputs": ["src/**/*.test.ts", "*/src/**/*.test.ts"]
+    },
+    "clean": {
+      "cache": false
+    },
+    "clean-all": {
+      "cache": false
+    }
+  }
+}

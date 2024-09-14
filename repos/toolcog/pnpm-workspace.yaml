@@ -1,0 +1,48 @@
+packages:
+  - packages/framework/util
+  - packages/framework/core
+  - packages/framework/runtime
+  - packages/framework/compiler
+  - packages/framework/repl
+  - packages/adapters/node
+  - packages/plugins/anthropic
+  - packages/plugins/openai
+  - packages/toolcog
+  - sandbox
+
+catalog:
+  "@types/node": ">=20"
+  commander: ^12.1
+  fast-glob: ^3.3
+  typescript: ^5.5
+  yaml: ^2.5
+
+catalogs:
+  build:
+    "@changesets/changelog-github": ^0.5
+    "@changesets/cli": ^2.27
+    "@eslint/js": ^9.10
+    "@rollup/plugin-node-resolve": ^15.2
+    "@rollup/plugin-replace": ^5.0
+    "@rollup/plugin-typescript": ^11.1
+    "@types/node": ^22
+    eslint: ^9.10
+    eslint-plugin-jsdoc: ^50.2
+    marked: ^14.1
+    prettier: ^3.3
+    rimraf: ^6.0
+    rollup: ^4.21
+    rollup-plugin-dts: ^6.1
+    rollup-plugin-node-externals: ^7.1
+    ts-expose-internals: ^5.5
+    ts-patch: ^3.2.1
+    tslib: ^2.6
+    turbo: ^2.1
+    typedoc: ^0.26
+    typescript: ^5.6
+    typescript-eslint: ^8.4
+    vitest: ^2.0
+  plugins:
+    "@anthropic-ai/sdk": ^0.27
+    openai: ^4.58
+    whatwg-url: ^14.0
