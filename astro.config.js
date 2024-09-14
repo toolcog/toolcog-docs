@@ -1,7 +1,7 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 import starlightBlog from "starlight-blog";
-//import starlightTypeDoc from "starlight-typedoc";
+import starlightTypeDoc from "starlight-typedoc";
 
 export default defineConfig({
   site: "https://docs.toolcog.com",
@@ -156,95 +156,95 @@ export default defineConfig({
             },
           ],
         },
-        //{
-        //  label: "API",
-        //  items: [
-        //    {
-        //      label: "Framework",
-        //      collapsed: true,
-        //      items: [
-        //        {
-        //          slug: "api/core/module",
-        //        },
-        //        {
-        //          slug: "api/runtime/module",
-        //        },
-        //      ],
-        //    },
-        //    {
-        //      label: "Plugins",
-        //      collapsed: true,
-        //      items: [
-        //        {
-        //          slug: "api/anthropic/module",
-        //        },
-        //        {
-        //          slug: "api/openai/module",
-        //        },
-        //      ],
-        //    },
-        //    {
-        //      label: "Adapters",
-        //      collapsed: true,
-        //      items: [
-        //        {
-        //          slug: "api/node/module",
-        //        },
-        //        {
-        //          slug: "api/node/loader/module",
-        //        },
-        //        {
-        //          slug: "api/node/register/module",
-        //        },
-        //      ],
-        //    },
-        //    {
-        //      label: "Libraries",
-        //      collapsed: true,
-        //      items: [
-        //        {
-        //          slug: "api/compiler/module",
-        //        },
-        //        {
-        //          slug: "api/compiler/cli/module",
-        //        },
-        //        {
-        //          slug: "api/repl/module",
-        //        },
-        //        {
-        //          slug: "api/util/module",
-        //        },
-        //        {
-        //          slug: "api/util/async/module",
-        //        },
-        //        {
-        //          slug: "api/util/cache/module",
-        //        },
-        //        {
-        //          slug: "api/util/emit/module",
-        //        },
-        //        {
-        //          slug: "api/util/json/module",
-        //        },
-        //        {
-        //          slug: "api/util/queue/module",
-        //        },
-        //        {
-        //          slug: "api/util/task/module",
-        //        },
-        //        {
-        //          slug: "api/util/timer/module",
-        //        },
-        //        {
-        //          slug: "api/util/tty/module",
-        //        },
-        //        {
-        //          slug: "api/util/tui/module",
-        //        },
-        //      ],
-        //    },
-        //  ],
-        //},
+        {
+          label: "API",
+          items: [
+            {
+              label: "Framework",
+              collapsed: true,
+              items: [
+                {
+                  slug: "api/core/module",
+                },
+                {
+                  slug: "api/runtime/module",
+                },
+              ],
+            },
+            {
+              label: "Plugins",
+              collapsed: true,
+              items: [
+                {
+                  slug: "api/anthropic/module",
+                },
+                {
+                  slug: "api/openai/module",
+                },
+              ],
+            },
+            {
+              label: "Adapters",
+              collapsed: true,
+              items: [
+                {
+                  slug: "api/node/module",
+                },
+                {
+                  slug: "api/node/loader/module",
+                },
+                {
+                  slug: "api/node/register/module",
+                },
+              ],
+            },
+            {
+              label: "Libraries",
+              collapsed: true,
+              items: [
+                {
+                  slug: "api/compiler/module",
+                },
+                {
+                  slug: "api/compiler/cli/module",
+                },
+                {
+                  slug: "api/repl/module",
+                },
+                {
+                  slug: "api/util/module",
+                },
+                {
+                  slug: "api/util/async/module",
+                },
+                {
+                  slug: "api/util/cache/module",
+                },
+                {
+                  slug: "api/util/emit/module",
+                },
+                {
+                  slug: "api/util/json/module",
+                },
+                {
+                  slug: "api/util/queue/module",
+                },
+                {
+                  slug: "api/util/task/module",
+                },
+                {
+                  slug: "api/util/timer/module",
+                },
+                {
+                  slug: "api/util/tty/module",
+                },
+                {
+                  slug: "api/util/tui/module",
+                },
+              ],
+            },
+          ],
+        },
       ],
       plugins: [
         starlightBlog({
@@ -257,41 +257,41 @@ export default defineConfig({
             },
           },
         }),
-        //starlightTypeDoc({
-        //  output: "api",
-        //  pagination: true,
-        //  typeDoc: {
-        //    entryPointStrategy: "packages",
-        //    entryFileName: "module",
-        //    outputFileStrategy: "modules",
-        //    excludeScopesInPaths: true,
-        //    mergeReadme: true,
-        //  },
-        //  entryPoints: [
-        //    "./repos/toolcog/packages/framework/compiler",
-        //    "./repos/toolcog/packages/framework/compiler/cli",
-        //    "./repos/toolcog/packages/framework/core",
-        //    "./repos/toolcog/packages/framework/repl",
-        //    "./repos/toolcog/packages/framework/runtime",
-        //    "./repos/toolcog/packages/framework/util",
-        //    "./repos/toolcog/packages/framework/util/async",
-        //    "./repos/toolcog/packages/framework/util/cache",
-        //    "./repos/toolcog/packages/framework/util/emit",
-        //    "./repos/toolcog/packages/framework/util/json",
-        //    "./repos/toolcog/packages/framework/util/queue",
-        //    "./repos/toolcog/packages/framework/util/task",
-        //    "./repos/toolcog/packages/framework/util/timer",
-        //    "./repos/toolcog/packages/framework/util/tty",
-        //    "./repos/toolcog/packages/framework/util/tui",
-        //    "./repos/toolcog/packages/plugins/anthropic",
-        //    "./repos/toolcog/packages/plugins/openai",
-        //    "./repos/toolcog/packages/adapters/node",
-        //    "./repos/toolcog/packages/adapters/node/loader",
-        //    "./repos/toolcog/packages/adapters/node/register",
-        //    "./repos/toolcog/packages/toolcog",
-        //  ],
-        //  tsconfig: "./repos/toolcog/tsconfig.json",
-        //}),
+        starlightTypeDoc({
+          output: "api",
+          pagination: true,
+          typeDoc: {
+            entryPointStrategy: "packages",
+            entryFileName: "module",
+            outputFileStrategy: "modules",
+            excludeScopesInPaths: true,
+            mergeReadme: true,
+          },
+          entryPoints: [
+            "./repos/toolcog/packages/framework/compiler",
+            "./repos/toolcog/packages/framework/compiler/cli",
+            "./repos/toolcog/packages/framework/core",
+            "./repos/toolcog/packages/framework/repl",
+            "./repos/toolcog/packages/framework/runtime",
+            "./repos/toolcog/packages/framework/util",
+            "./repos/toolcog/packages/framework/util/async",
+            "./repos/toolcog/packages/framework/util/cache",
+            "./repos/toolcog/packages/framework/util/emit",
+            "./repos/toolcog/packages/framework/util/json",
+            "./repos/toolcog/packages/framework/util/queue",
+            "./repos/toolcog/packages/framework/util/task",
+            "./repos/toolcog/packages/framework/util/timer",
+            "./repos/toolcog/packages/framework/util/tty",
+            "./repos/toolcog/packages/framework/util/tui",
+            "./repos/toolcog/packages/plugins/anthropic",
+            "./repos/toolcog/packages/plugins/openai",
+            "./repos/toolcog/packages/adapters/node",
+            "./repos/toolcog/packages/adapters/node/loader",
+            "./repos/toolcog/packages/adapters/node/register",
+            "./repos/toolcog/packages/toolcog",
+          ],
+          tsconfig: "./repos/toolcog/tsconfig.json",
+        }),
       ],
     }),
   ],

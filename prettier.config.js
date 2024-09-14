@@ -1,7 +1,7 @@
-//import config from "./repos/toolcog/prettier.config.js";
+import config from "./repos/toolcog/prettier.config.js";
 
 export default {
-  //...config,
+  ...config,
   plugins: ["prettier-plugin-astro"],
   overrides: [
     {
